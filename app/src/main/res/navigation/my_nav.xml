@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.miniuper.Fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_choosePersonFragment"
+            app:destination="@id/choosePersonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/choosePersonFragment"
+        android:name="com.example.miniuper.Authentication.AuthenticationFragments.ChoosePersonFragment"
+        android:label="fragment_choose_person"
+        tools:layout="@layout/fragment_choose_person" >
+        <action
+            android:id="@+id/action_choosePersonFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_choosePersonFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.miniuper.Authentication.AuthenticationFragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeEmployeeFragment"
+            app:destination="@id/homeEmployeeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeDriverFragment"
+            app:destination="@id/homeDriverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.miniuper.Authentication.AuthenticationFragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeCustomerFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.HomeCustomerFragment"
+        android:label="fragment_home_customer"
+        tools:layout="@layout/fragment_home_customer" >
+        <action
+            android:id="@+id/action_homeCustomerFragment_to_viewAllTripsFragment"
+            app:destination="@id/viewAllTripsFragment" />
+        <action
+            android:id="@+id/action_homeCustomerFragment_to_viewAcceptedTripFragment"
+            app:destination="@id/viewAcceptedTripFragment" />
+        <action
+            android:id="@+id/action_homeCustomerFragment_to_addTripFragment"
+            app:destination="@id/addTripFragment" />
+        <action
+            android:id="@+id/action_homeCustomerFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeEmployeeFragment"
+        android:name="com.example.miniuper.Admin.AdminFragments.HomeEmployeeFragment"
+        android:label="fragment_home_employee"
+        tools:layout="@layout/fragment_home_employee" >
+        <action
+            android:id="@+id/action_homeEmployeeFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+        <action
+            android:id="@+id/action_homeEmployeeFragment_to_addCarFragment"
+            app:destination="@id/addCarFragment" />
+        <action
+            android:id="@+id/action_homeEmployeeFragment_to_addDriverFragment"
+            app:destination="@id/addDriverFragment" />
+        <action
+            android:id="@+id/action_homeEmployeeFragment_to_viewAllFeedbackFragment"
+            app:destination="@id/viewAllFeedbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeDriverFragment"
+        android:name="com.example.miniuper.Driver.DriverFragments.HomeDriverFragment"
+        android:label="fragment_home_driver"
+        tools:layout="@layout/fragment_home_driver" >
+        <action
+            android:id="@+id/action_homeDriverFragment_to_searchTripFragment"
+            app:destination="@id/searchTripFragment" />
+        <action
+            android:id="@+id/action_homeDriverFragment_to_historyForDriverFragment"
+            app:destination="@id/historyForDriverFragment" />
+        <action
+            android:id="@+id/action_homeDriverFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCarFragment"
+        android:name="com.example.miniuper.Admin.AdminFragments.AddCarFragment"
+        android:label="fragment_add_car"
+        tools:layout="@layout/fragment_add_car" >
+        <action
+            android:id="@+id/action_addCarFragment_to_homeEmployeeFragment2"
+            app:destination="@id/homeEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDriverFragment"
+        android:name="com.example.miniuper.Admin.AdminFragments.AddDriverFragment"
+        android:label="fragment_add_driver"
+        tools:layout="@layout/fragment_add_driver" >
+        <action
+            android:id="@+id/action_addDriverFragment_to_viewUnAssignedCarFragment"
+            app:destination="@id/viewUnAssignedCarFragment" />
+        <action
+            android:id="@+id/action_addDriverFragment_to_homeEmployeeFragment"
+            app:destination="@id/homeEmployeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewUnAssignedCarFragment"
+        android:name="com.example.miniuper.Admin.AdminFragments.ViewUnAssignedCarFragment"
+        android:label="fragment_view_un_assigned_car"
+        tools:layout="@layout/fragment_view_un_assigned_car" >
+        <action
+            android:id="@+id/action_viewUnAssignedCarFragment_to_addDriverFragment"
+            app:destination="@id/addDriverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTripFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.AddTripFragment"
+        android:label="fragment_add_trip"
+        tools:layout="@layout/fragment_add_trip" >
+        <action
+            android:id="@+id/action_addTripFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+        <action
+            android:id="@+id/action_addTripFragment_to_calenderFragment"
+            app:destination="@id/calenderFragment" />
+        <action
+            android:id="@+id/action_addTripFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllTripsFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.ViewAllTripsFragment"
+        android:label="fragment_view_all_trips"
+        tools:layout="@layout/fragment_view_all_trips" >
+        <action
+            android:id="@+id/action_viewAllTripsFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAcceptedTripFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.ViewAcceptedTripFragment"
+        android:label="fragment_view_accepted_trip"
+        tools:layout="@layout/fragment_view_accepted_trip" >
+        <action
+            android:id="@+id/action_viewAcceptedTripFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+        <action
+            android:id="@+id/action_viewAcceptedTripFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.CalenderFragment"
+        android:label="fragment_calender"
+        tools:layout="@layout/fragment_calender" >
+        <action
+            android:id="@+id/action_calenderFragment_to_addTripFragment"
+            app:destination="@id/addTripFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchTripFragment"
+        android:name="com.example.miniuper.Driver.DriverFragments.SearchTripFragment"
+        android:label="fragment_search_trip"
+        tools:layout="@layout/fragment_search_trip" >
+        <action
+            android:id="@+id/action_searchTripFragment_to_homeDriverFragment"
+            app:destination="@id/homeDriverFragment" />
+        <action
+            android:id="@+id/action_searchTripFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyForDriverFragment"
+        android:name="com.example.miniuper.Driver.DriverFragments.HistoryForDriverFragment"
+        android:label="fragment_history_for_driver"
+        tools:layout="@layout/fragment_history_for_driver" >
+        <action
+            android:id="@+id/action_historyForDriverFragment_to_homeDriverFragment"
+            app:destination="@id/homeDriverFragment" />
+        <action
+            android:id="@+id/action_historyForDriverFragment_to_homeDriverFragment2"
+            app:destination="@id/homeDriverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.miniuper.Customer.CustomerFragment.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" >
+        <action
+            android:id="@+id/action_feedbackFragment_to_homeCustomerFragment"
+            app:destination="@id/homeCustomerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAllFeedbackFragment"
+        android:name="com.example.miniuper.Admin.AdminFragments.ViewAllFeedbackFragment"
+        android:label="fragment_view_all_feedback"
+        tools:layout="@layout/fragment_view_all_feedback" >
+        <action
+            android:id="@+id/action_viewAllFeedbackFragment_to_homeEmployeeFragment"
+            app:destination="@id/homeEmployeeFragment" />
+    </fragment>
+</navigation>

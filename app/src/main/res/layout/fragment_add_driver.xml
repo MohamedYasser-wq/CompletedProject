@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Admin.AdminFragments.AddDriverFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:text="Add Driver"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_backHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:src="@drawable/baseline_home_242" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Name"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+
+    <EditText
+        android:id="@+id/Edt_Driver_Name"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="10dp"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Email"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_Driver_Name" />
+
+    <EditText
+        android:id="@+id/Edt_Driver_Email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="8dp"
+        android:hint="Email"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        android:paddingStart="25dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_Driver_Name"
+        app:layout_constraintStart_toStartOf="@+id/Edt_Driver_Name"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Phone"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_Driver_Email" />
+
+    <EditText
+        android:id="@+id/Edt_Driver_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_phone_24"
+        android:drawablePadding="8dp"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:paddingStart="25dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_Driver_Email"
+        app:layout_constraintStart_toStartOf="@+id/Edt_Driver_Email"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_Driver_phone" />
+
+
+    <EditText
+        android:id="@+id/Edt_Driver_Password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_lock_24"
+        android:drawablePadding="8dp"
+        android:hint="password"
+        android:layout_marginTop="10dp"
+        android:inputType="numberPassword"
+        android:paddingStart="25dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_Driver_phone"
+        app:layout_constraintStart_toStartOf="@+id/Edt_Driver_phone"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintWidth_percent="0.9" />
+
+
+            <Button
+                android:id="@+id/Btn_Add_New_Driver"
+                android:layout_width="138dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="80dp"
+
+                android:backgroundTint="@color/black"
+                android:text="Add"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_Driver_Password" />
+
+            <Button
+                android:id="@+id/btn_Choose_Car"
+                android:layout_width="135dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/black"
+                android:text="Assign Car "
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_Driver_Password" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

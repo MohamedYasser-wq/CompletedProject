@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Admin.AdminFragments.AddCarFragment">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_backHome"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:src="@drawable/baseline_home_242"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Car"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Model"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <EditText
+        android:id="@+id/Edt_model"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_directions_car_24"
+        android:hint="Model"
+        android:inputType="text"
+        android:layout_margin="10dp"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Year"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_model" />
+
+    <EditText
+        android:id="@+id/Edt_Year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_directions_car_24"
+        android:layout_marginTop="10dp"
+        android:hint="Year"
+        android:inputType="date"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_model"
+        app:layout_constraintStart_toStartOf="@+id/Edt_model"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Color"
+        android:textColor="@color/Gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_Year" />
+
+    <EditText
+        android:id="@+id/Edt_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_directions_car_24"
+        android:layout_marginTop="10dp"
+        android:hint="color"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_Year"
+        app:layout_constraintStart_toStartOf="@+id/Edt_Year"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="20dp"
+        android:text="Plate Number"
+        android:textColor="@color/Gray"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/Edt_color" />
+
+
+    <EditText
+        android:id="@+id/Edt_PlanetNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@drawable/edit_text2"
+        android:drawableLeft="@drawable/baseline_directions_car_24"
+        android:ems="10"
+        android:hint="planet Number"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8D000000"
+        app:layout_constraintEnd_toEndOf="@+id/Edt_color"
+        app:layout_constraintStart_toStartOf="@+id/Edt_color"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <Button
+                android:id="@+id/Btn_Add_Car"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#353434"
+                android:text="Add"
+                app:layout_constraintWidth_percent="0.6"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/Edt_PlanetNumber"
+                app:layout_constraintStart_toStartOf="@+id/Edt_PlanetNumber"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_PlanetNumber"
+                />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
